@@ -22,8 +22,8 @@
 ## RPC ; 
 
 - Alchemy
-- Drpc
-- Infura
+- ANKR
+- Public Node ; https://ethereum.publicnode.com/?sepolia
 
 ## 1. Server Update : 
 
@@ -87,6 +87,10 @@ bash -i <(curl -s https://install.aztec.network)
 source .bash_profile
 ```
 
+#### Try ; 
+```bash
+aztec
+```
 ## Update ; 
 
 ```bash
@@ -114,7 +118,22 @@ aztec start --node --archiver --sequencer \
 - RPC_URL ; Sepolia RPC
 - BEACON_URL ; Beacon RPC
 
+#### Sepolia ; 
 
+![image](https://github.com/user-attachments/assets/2700bb9d-5f38-4548-82ee-49e8045e46bc)
+
+
+
+## Validator Reg
+```bash
+aztec add-l1-validator \
+  --l1-rpc-urls RPC_URL \
+  --private-key your-private-key \
+  --attester your-validator-address \
+  --proposer-eoa your-validator-address \
+  --staking-asset-handler 0xF739D03e98e23A7B65940848aBA8921fF3bAc4b2 \
+  --l1-chain-id 11155111
+```
 <p align="center">
   <img src="https://komarev.com/ghpvc/?username=FurkanL0&style=flat-square&color=red&label=Profile+Views+/+Repo+Views+" alt="Repo / Profile Views" />
 </p>
