@@ -135,7 +135,7 @@ curl -s -X POST -H 'Content-Type: application/json' \
 http://localhost:8080 | jq -r ".result.proven.number"
 ```
 * Save this block number for the next steps
-* Example output: 20905
+* Example output: 12345
 
 **Step 2: Generate your sync proof**
 ```bash
