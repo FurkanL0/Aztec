@@ -122,7 +122,32 @@ aztec start --node --archiver --sequencer \
 
 ![image](https://github.com/user-attachments/assets/2700bb9d-5f38-4548-82ee-49e8045e46bc)
 
+![image](https://github.com/user-attachments/assets/b16a0561-b81d-4fd4-ad03-8e4e296cba5a)
 
+
+**Step 1: Get the latest proven block number:**
+```bash
+curl -s -X POST -H 'Content-Type: application/json' \
+-d '{"jsonrpc":"2.0","method":"node_getL2Tips","params":[],"id":67}' \
+http://localhost:8080 | jq -r ".result.proven.number"
+```
+* Save this block number for the next steps
+* Example output: 20905
+
+**Step 2: Generate your sync proof**
+```bash
+curl -s -X POST -H 'Content-Type: application/json' \
+-d '{"jsonrpc":"2.0","method":"node_getArchiveSiblingPath","params":["BLOCK_NUMBER","BLOCK_NUMBER"],"id":67}' \
+http://localhost:8080 | jq -r ".result"
+```
+* Replace 2x `BLOCK_NUMBER` with your number
+
+**Step 3: Register with Discord**
+* Type the following command in this Discord server: `/operator start`
+* After typing the command, Discord will display option fields that look like this:
+* `address`:            Your validator address (Ethereum Address)
+* `block-number`:      Block number for verification (Block number from Step 1)
+* `proof`:             Your sync proof (base64 string from Step 2)
 
 ## Validator Reg
 ```bash
