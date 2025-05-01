@@ -122,6 +122,9 @@ aztec start --node --archiver --sequencer \
 
 ![image](https://github.com/user-attachments/assets/2700bb9d-5f38-4548-82ee-49e8045e46bc)
 
+
+## Role ; 
+
 ![image](https://github.com/user-attachments/assets/b16a0561-b81d-4fd4-ad03-8e4e296cba5a)
 
 
