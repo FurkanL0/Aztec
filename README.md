@@ -87,7 +87,40 @@ bash -i <(curl -s https://install.aztec.network)
 source .bash_profile
 ```
 
-#### Sequencer Node Setup (Example Command)
+#### Aztec-Prover ; 
+
+```bash
+mkdir -p ~/aztec-prover && cd ~/aztec-prover
+```
+```bash
+nano docker-compose.yml
+```
+
+#### Edit This And Paste ; 
+
+```bash
+version: '3.8'
+services:
+  aztec-sequencer:
+    image: aztecprotocol/aztec:latest
+    environment:
+      ETHEREUM_HOSTS: "https://eth-sepolia.g.alchemy.com/v2/YOUR_API_KEY"
+      L1_CONSENSUS_HOST_URLS: "https://sepolia-consensus.drpc.org"
+      VALIDATOR_PRIVATE_KEY: "0xYOUR_PRIVATE_KEY"
+      P2P_IP: "YOUR_EXTERNAL_IP"
+      LOG_LEVEL: "debug"
+    ports:
+      - 40400:40400/tcp
+      - 40400:40400/udp
+      - 8080:8080
+    networks:
+      - aztec-network
+  volumes:
+    - /home/my-node/node:/data  # Local directory
+networks:
+  aztec-network:
+    driver: bridge
+```
 ##### Gather the Required Information:
 
 #### L1 RPC Endpoint: The Sepolia or testnet endpoint you created via Alchemy
@@ -100,6 +133,18 @@ source .bash_profile
 - (e.g., private key: 0xPRIVATE_KEY, coinbase address: 0xYOUR_ETH_ADDRESS)
 
 #### P2P IP: Use the curl ifconfig.me command to get your external IP address
+
+#### Start ; 
+
+```bash
+docker-compose up -d
+```
+
+#### Logs ; 
+
+```bash
+docker-compose logs -f
+```
 
 <p align="center">
   <img src="https://komarev.com/ghpvc/?username=FurkanL0&style=flat-square&color=red&label=Profile+Views+/+Repo+Views+" alt="Repo / Profile Views" />
