@@ -19,6 +19,12 @@
 ## Project : 
 - Twitter : https://x.com/aztecnetwork
 
+## RPC ; 
+
+- Alchemy
+- Drpc
+- Infura
+
 ## 1. Server Update : 
 
 ```bash
