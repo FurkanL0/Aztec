@@ -99,26 +99,28 @@ nano docker-compose.yml
 #### Edit This And Paste ; 
 
 ```bash
-name: aztec-node
+version: '3.7'
+
 services:
-  network_mode: host # Optional, run with host networking
-  node:
+  aztec-node:
     image: aztecprotocol/aztec:0.85.0-alpha-testnet.5
+    container_name: aztec-sequencer
     environment:
-      ETHEREUM_HOSTS: "https://eth-sepolia.alchemyapi.io/v2/YOUR_API_KEY"
-      L1_CONSENSUS_HOST_URLS: "https://sepolia-consensus.drpc.org"
+      ETHEREUM_HOSTS: "rpc"
+      L1_CONSENSUS_HOST_URLS: "rpc"
       DATA_DIRECTORY: /data
-      VALIDATOR_PRIVATE_KEY: "0xYOUR_PRIVATE_KEY"
-      P2P_IP: "YOUR_PUBLIC_IP"
+      VALIDATOR_PRIVATE_KEY: "priv"
+      P2P_IP: "ip"
       LOG_LEVEL: debug
-    entrypoint: >
-      sh -c 'node --no-warnings /usr/src/yarn-project/aztec/dest/bin/index.js start --network alpha-testnet start --node --archiver --sequencer'
     ports:
-      - 40400:40400/tcp
-      - 40400:40400/udp
-      - 8080:8080
-  volumes:
-    - /home/my-node/node:/data # Local directory
+      - "40403:40400/tcp"
+      - "40403:40400/udp"
+      - "8083:8080"
+      - "8596:8595"
+    volumes:
+      - /home/my-node/node:/data
+    entrypoint: >
+      sh -c "node --no-warnings /usr/src/yarn-project/aztec/dest/bin/index.js start --network alpha-testnet --node --archiver --sequencer"
 ```
 ##### Gather the Required Information:
 
