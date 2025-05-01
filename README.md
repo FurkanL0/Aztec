@@ -87,6 +87,19 @@ bash -i <(curl -s https://install.aztec.network)
 source .bash_profile
 ```
 
+#### Sequencer Node Setup (Example Command)
+##### Gather the Required Information:
+
+#### L1 RPC Endpoint: The Sepolia or testnet endpoint you created via Alchemy
+- (e.g., https://eth-sepolia.g.alchemy.com/v2/YOUR_API_KEY)
+
+#### L1 Consensus Endpoint: The URL required for consensus operations
+- (e.g., https://sepolia-consensus.drpc.org)
+
+#### Ethereum Keys: The Ethereum private key and address you'll use as a validator
+- (e.g., private key: 0xPRIVATE_KEY, coinbase address: 0xYOUR_ETH_ADDRESS)
+
+#### P2P IP: Use the curl ifconfig.me command to get your external IP address
 
 <p align="center">
   <img src="https://komarev.com/ghpvc/?username=FurkanL0&style=flat-square&color=red&label=Profile+Views+/+Repo+Views+" alt="Repo / Profile Views" />
