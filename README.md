@@ -87,65 +87,33 @@ bash -i <(curl -s https://install.aztec.network)
 source .bash_profile
 ```
 
-#### Aztec-Prover ; 
+## Update ; 
 
 ```bash
-mkdir -p ~/aztec-prover && cd ~/aztec-prover
+aztec-up alpha-testnet
 ```
-```bash
-nano docker-compose.yml
-```
+## Aztec Seq ; 
 
-#### Edit This And Paste ; 
+#### Screen ; 
 
 ```bash
-version: '3.7'
-
-services:
-  aztec-node:
-    image: aztecprotocol/aztec:0.85.0-alpha-testnet.5
-    container_name: aztec-sequencer
-    environment:
-      ETHEREUM_HOSTS: "rpc"
-      L1_CONSENSUS_HOST_URLS: "rpc"
-      DATA_DIRECTORY: /data
-      VALIDATOR_PRIVATE_KEY: "priv"
-      P2P_IP: "ip"
-      LOG_LEVEL: debug
-    ports:
-      - "40403:40400/tcp"
-      - "40403:40400/udp"
-      - "8083:8080"
-      - "8596:8595"
-    volumes:
-      - /home/my-node/node:/data
-    entrypoint: >
-      sh -c "node --no-warnings /usr/src/yarn-project/aztec/dest/bin/index.js start --network alpha-testnet --node --archiver --sequencer"
+screen -S aztec
 ```
-##### Gather the Required Information:
-
-#### L1 RPC Endpoint: The Sepolia or testnet endpoint you created via Alchemy
-- (e.g., https://eth-sepolia.g.alchemy.com/v2/YOUR_API_KEY)
-
-#### L1 Consensus Endpoint: The URL required for consensus operations
-- (e.g., https://sepolia-consensus.drpc.org)
-
-#### Ethereum Keys: The Ethereum private key and address you'll use as a validator
-- (e.g., private key: 0xPRIVATE_KEY, coinbase address: 0xYOUR_ETH_ADDRESS)
-
-#### P2P IP: Use the curl ifconfig.me command to get your external IP address
-
-#### Start ; 
-
 ```bash
-docker-compose up -d
+aztec start --node --archiver --sequencer \
+  --network alpha-testnet \
+  --l1-rpc-urls RPC_URL  \
+  --l1-consensus-host-urls BEACON_URL \
+  --sequencer.validatorPrivateKey 0xYourPrivateKey \
+  --sequencer.coinbase 0xYourAddress \
+  --p2p.p2pIp IP
 ```
 
-#### Logs ; 
+- IP ; Server IP
+- 0xYourPrivateKey ; Metamask Private key
+- RPC_URL ; Sepolia RPC
+- BEACON_URL ; Beacon RPC
 
-```bash
-docker-compose logs -f
-```
 
 <p align="center">
   <img src="https://komarev.com/ghpvc/?username=FurkanL0&style=flat-square&color=red&label=Profile+Views+/+Repo+Views+" alt="Repo / Profile Views" />
