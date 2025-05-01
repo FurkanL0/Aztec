@@ -75,6 +75,8 @@ bash -i <(curl -s https://install.aztec.network)
 
 - y
 
+#### Fresh Shell ; 
+
 ```bash
 source .bash_profile
 ```
