@@ -61,8 +61,15 @@ sudo usermod -aG docker $USER
 
 #### Sequencer ; Sequencers in the Aztec network propose and produce blocks. Sequencers are also responsible for proposing and voting on network upgrades. Participate using consumer hardware.
 
+#### Install Aztec ; 
 
+```bash
+bash -i <(curl -s https://install.aztec.network)
+```
 
+![image](https://github.com/user-attachments/assets/23b39122-7e2f-4618-9d5f-2645d4f8b2bd)
+
+- y.
 
 <p align="center">
   <img src="https://komarev.com/ghpvc/?username=FurkanL0&style=flat-square&color=red&label=Profile+Views+/+Repo+Views+" alt="Repo / Profile Views" />
