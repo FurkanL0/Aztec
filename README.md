@@ -152,6 +152,11 @@ http://localhost:8080 | jq -r ".result"
 * `block-number`:      Block number for verification (Block number from Step 1)
 * `proof`:             Your sync proof (base64 string from Step 2)
 
+![image](https://github.com/user-attachments/assets/16af82f7-f5d9-4829-9cf1-1cb1f4920fb6)
+
+- DC 
+- /operator start 
+
 ## Validator Reg
 ```bash
 aztec add-l1-validator \
