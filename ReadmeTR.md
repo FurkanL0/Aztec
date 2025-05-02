@@ -127,6 +127,9 @@ aztec start --node --archiver --sequencer \
 
 ![image](https://github.com/user-attachments/assets/2700bb9d-5f38-4548-82ee-49e8045e46bc)
 
+#### ChainStack Beacon ; 
+
+![image](https://github.com/user-attachments/assets/5a148704-759c-4bf4-a2cb-98807d43a8fd)
 
 ## Role ; 
 
