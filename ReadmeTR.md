@@ -6,11 +6,11 @@
 |------------------|----------------------------|
 | **CPU**          | 8++ |
 | **RAM**          | 16++ GB ( 20++ )                    |
-| **Storage**      | 1 TB+ NVME GB SDD                   |
-| **Network**      | 100 Mbps (1 Gbps+ recommended) |
+| **Disk**      | 1 TB+ NVME GB SDD                   |
+| **Ağ Hızı**      | 100 Mbps (1 Gbps+ recommended) |
 
 
-| Server Provider        | Link              | Features |
+| Server         | Link              | Features |
 |------------------|----------------------------|----------------------------|
 | **Contabo**          | [Link](https://www.dpbolvw.net/click-101330552-12454592)                     | Cheap / Paypal  |
 | **PQ**      | [Link](https://pq.hosting/?from=627713)                  | Cheap / Crypto Payment |
