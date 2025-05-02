@@ -133,7 +133,7 @@ aztec start --node --archiver --sequencer \
 ![image](https://github.com/user-attachments/assets/b16a0561-b81d-4fd4-ad03-8e4e296cba5a)
 
 
-**Step 1: Son Block Numarasını alalım:**
+**Aşama 1: Son Block Numarasını alalım:**
 ```bash
 curl -s -X POST -H 'Content-Type: application/json' \
 -d '{"jsonrpc":"2.0","method":"node_getL2Tips","params":[],"id":67}' \
@@ -142,20 +142,20 @@ http://localhost:8080 | jq -r ".result.proven.number"
 * Block numarasını kayıt edelim lazım olacak.
 * Örnek Blok: 20287
 
-**Step 2: Blok için Proof Üretelim**
+**Aşama 2: Blok için Proof Üretelim**
 ```bash
 curl -s -X POST -H 'Content-Type: application/json' \
 -d '{"jsonrpc":"2.0","method":"node_getArchiveSiblingPath","params":["BLOCK_NUMBER","BLOCK_NUMBER"],"id":67}' \
 http://localhost:8080 | jq -r ".result"
 ```
-* 2 Kez `BLOCK_NUMBER` yazan yere kayıt aldığımız block numarasını yazıyoruz.
+* `BLOCK_NUMBER` yazan yerlere kayıt aldığımız block numarasını yazıyoruz. Evet 2 kez.
 
-**Step 3: Register with Discord**
-* Type the following command in this Discord server: `/operator start`
-* After typing the command, Discord will display option fields that look like this:
-* `address`:            Your validator address (Ethereum Address)
-* `block-number`:      Block number for verification (Block number from Step 1)
-* `proof`:             Your sync proof (base64 string from Step 2)
+**Aşama 3: Discord Rol Kayıt**
+* Discord kanalında kanala bunu yazın yukarıda çıkan'a tıklayın : `/operator start`
+* Sonrasında 3 alan açıcak sırasıyla bunu isteyecek:
+* `address`:            Private keyinin cüzdan adresi (Ethereum Addresi)
+* `block-number`:      Kayıt aldığımız block numarası (Block numarası)
+* `proof`:             Proof üretim sonrası upuzun bir proof atıyor onu yapıştırıyoruz (base64 kod dizini)
 
 ![image](https://github.com/user-attachments/assets/16af82f7-f5d9-4829-9cf1-1cb1f4920fb6)
 
