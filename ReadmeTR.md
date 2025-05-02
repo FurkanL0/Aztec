@@ -23,7 +23,8 @@
 
 - Alchemy
 - ANKR
-- Public Node ; https://ethereum.publicnode.com/?sepolia
+- DRPC
+- Public Node
 
 ## 1. Server Güncelleme : 
 
