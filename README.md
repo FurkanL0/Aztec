@@ -157,6 +157,9 @@ http://localhost:8080 | jq -r ".result"
 - DC 
 - /operator start 
 
+![image](https://github.com/user-attachments/assets/857c7722-7d46-4406-a027-f87f444aad60)
+
+
 ## Validator Reg
 ```bash
 aztec add-l1-validator \
