@@ -23,7 +23,7 @@
 
 - Alchemy
 - ANKR
-- DRPC
+- BEACON L1 : CHAINSTACK 
 - Public Node
 
 ## 1. Server Güncelleme : 
