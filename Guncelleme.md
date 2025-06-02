@@ -69,7 +69,6 @@ aztec start --node --archiver --sequencer \
   --l1-consensus-host-urls BEACON_URL \
   --sequencer.validatorPrivateKey 0xYourPrivateKey \
   --sequencer.coinbase 0xYourAddress \
-  --sequencer.governanceProposerPayload 0x54F7fe24E349993b363A5Fa1bccdAe2589D5E5Ef \
   --p2p.p2pIp IP \
   --p2p.maxTxPoolSize 1000000000
 ```
