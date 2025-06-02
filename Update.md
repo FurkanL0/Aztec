@@ -80,7 +80,8 @@ rm -rf ~/.aztec/alpha-testnet/data/
 ```bash
 aztec-up latest
 ```
-![image](https://github.com/user-attachments/assets/04718d54-51d2-41c3-8ead-ee2705eaf254)
+![image](https://github.com/user-attachments/assets/0bdd9052-64cb-4909-bc6e-9100f5987b57)
+
 
 #### Restart Your Node ; 
 
