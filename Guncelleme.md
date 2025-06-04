@@ -72,3 +72,40 @@ aztec start --node --archiver --sequencer \
   --p2p.p2pIp IP \
   --p2p.maxTxPoolSize 1000000000
 ```
+
+## 04.06.2025 Günceleme : 
+
+```bash
+screen -r aztec
+```
+- CTRL + C - Nodemizi durduralım
+
+#### Node Güncelleme ; 
+
+```bash
+aztec-up latest
+```
+![image](https://github.com/user-attachments/assets/72cbd131-e82e-413f-bfd6-5e1fe4f491f9)
+
+
+## Versiyon Kontrolü : 
+
+```bash
+aztec -V
+```
+
+- 0.87.7 ve üstü olmalı.
+
+
+#### Yeniden Başlatalım ; 
+
+```bash
+aztec start --node --archiver --sequencer \
+  --network alpha-testnet \
+  --l1-rpc-urls RPC_URL  \
+  --l1-consensus-host-urls BEACON_URL \
+  --sequencer.validatorPrivateKey 0xYourPrivateKey \
+  --sequencer.coinbase 0xYourAddress \
+  --p2p.p2pIp IP \
+  --p2p.maxTxPoolSize 1000000000
+```
